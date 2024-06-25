@@ -1,0 +1,15 @@
+D:\work\PrintBanCuoi\PrintManagement.Application\bin\Debug\net6.0\PrintManagement.Application.deps.json
+D:\work\PrintBanCuoi\PrintManagement.Application\bin\Debug\net6.0\PrintManagement.Application.dll
+D:\work\PrintBanCuoi\PrintManagement.Application\bin\Debug\net6.0\PrintManagement.Application.pdb
+D:\work\PrintBanCuoi\PrintManagement.Application\bin\Debug\net6.0\PrintManagement.Domain.dll
+D:\work\PrintBanCuoi\PrintManagement.Application\bin\Debug\net6.0\PrintManagement.Domain.pdb
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\PrintManagement.Application.csproj.AssemblyReference.cache
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\PrintManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\PrintManagement.Application.AssemblyInfoInputs.cache
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\PrintManagement.Application.AssemblyInfo.cs
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\PrintManagement.Application.csproj.CoreCompileInputs.cache
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\PrintManagement.Application.csproj.CopyComplete
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\PrintManagement.Application.dll
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\refint\PrintManagement.Application.dll
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\PrintManagement.Application.pdb
+D:\work\PrintBanCuoi\PrintManagement.Application\obj\Debug\net6.0\ref\PrintManagement.Application.dll

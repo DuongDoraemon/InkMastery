@@ -1,0 +1,19 @@
+﻿using PrintManagement.Domain.Entities;
+using PrintManagement.Domain.Enumerates;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PrintManagement.Application.Payloads.RequestModels.InputRequests
+{
+    public class Request_InputProject
+    {
+        public string? ProjectName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public Guid? LeaderId { get; set; }
+        public Guid? CustomerId { get; set; }
+    }
+}

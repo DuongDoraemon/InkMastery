@@ -1,0 +1,70 @@
+create database QuanLyDonDatHang
+go
+use QuanLyDonDatHang
+create table loaiSanPhams(
+	LoaiSanPhamID int primary key not null,
+	TenLoai nvarchar(max) not null
+)
+create table khachHangs(
+	KhachHangID int primary key not null,
+	HoTen nvarchar(max) not null,
+	NgaySinh date not null,
+	DiaChi nvarchar(max) not null,
+	TenDangNhap nvarchar(max) not null,
+	MatKhau nvarchar(max) not null,
+	Email nvarchar(max) not null,
+	SoDienThoai nvarchar(max) not null
+)
+create table sanPhams(
+	SanPhamID int primary key not null,
+	LoaiSanPhamID int not null,
+	TenSanPham nvarchar(max) not null,
+	GiaSanPham int not null,
+	constraint FK_loaiSanPhams_sanPhams foreign key (LoaiSanPhamID) references loaiSanPhams(LoaiSanPhamID)
+)
+create table hoaDons(
+	HoaDonID int primary key not null,
+	KhachHangID int not null,
+	ThoiGianTao date not null,
+	ThoiGianCapNhat date not null,
+	constraint FK_khachHangs_hoaDons foreign key (KhachHangID) references khachHangs(KhachHangID)
+)
+create table chiTietHoaDons(
+	ChiTietHoaDonID int primary key not null,
+	HoaDonID int not null,
+	SanPhamID int not null,
+	SoLuong int not null,
+	constraint FK_chiTietHoaDons_hoaDons foreign key (HoaDonID) references hoaDons(HoaDonID),
+	constraint FK_chiTietHoaDons_sanPhams foreign key (SanPhamID) references sanPhams(SanPhamID)
+)
+
+INSERT INTO loaiSanPhams (LoaiSanPhamID, TenLoai)
+VALUES
+    (1, N'Loại sản phẩm 1'),
+    (2, N'Loại sản phẩm 2'),
+	(3, N'Loại sản phẩm 3');
+
+INSERT INTO khachHangs (KhachHangID, HoTen, NgaySinh, DiaChi, TenDangNhap, MatKhau, Email, SoDienThoai)
+VALUES
+    (1, N'Nguyễn Văn A', '1990-01-15', N'123 Đường ABC, Quận XYZ', N'user1', N'password1', N'user1@example.com', N'123456789'),
+    (2, N'Trần Thị B', '1985-03-20', N'456 Đường DEF, Quận UVW', N'user2', N'password2', N'user2@example.com', N'987654321'),
+	(3, N'Nguyễn Văn C', '1995-04-15', N'789 Đường TYU, Quận HJK', N'user3', N'password3', N'user3@example.com', N'0273273234');
+
+INSERT INTO sanPhams (SanPhamID, LoaiSanPhamID, TenSanPham, GiaSanPham)
+VALUES
+    (1, 1, N'Sản phẩm A', 5000),
+    (2, 2, N'Sản phẩm B', 2000),
+    (3, 3, N'Sản phẩm C', 8000);
+
+INSERT INTO hoaDons (HoaDonID, KhachHangID, ThoiGianTao, ThoiGianCapNhat)
+VALUES
+    (1, 1, '2023-09-18', '2023-09-18'),
+	(2, 2, '2023-09-18', '2023-09-17'),
+    (3, 3, '2023-09-17', '2023-09-16');
+
+INSERT INTO chiTietHoaDons (ChiTietHoaDonID, HoaDonID, SanPhamID, SoLuong)
+VALUES
+    (1, 1, 1, 5),
+    (2, 1, 2, 3),
+    (3, 2, 3, 2),
+    (4, 3, 3, 6);
